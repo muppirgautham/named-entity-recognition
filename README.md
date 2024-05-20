@@ -82,8 +82,6 @@ sentences[0]
 word2idx = {w: i + 1 for i, w in enumerate(words)}
 tag2idx = {t: i for i, t in enumerate(tags)}
 word2idx
-print("S Adithya Chowdary")
-print("212221230100")
 print("Length of each sentences")
 plt.hist([len(s) for s in sentences], bins=50)
 plt.show()X1 = [[word2idx[w[0]] for w in s] for s in sentences]
@@ -126,12 +124,8 @@ history = ent_name.fit(
 )
 metrics = pd.DataFrame(ent_name.history.history)
 metrics.head()
-print("S Adithya Chowdary")
-print("212221230100")
 print("Accuracy VS validation accuracy")
 metrics[['accuracy','val_accuracy']].plot()
-print("S Adithya Chowdary")
-print("212221230100")
 print("Loss VS Validation loss")
 metrics[['loss','val_loss']].plot()
 i = 30
@@ -139,7 +133,6 @@ p = ent_name.predict(np.array([X_test[i]]))
 p = np.argmax(p, axis=-1)
 y_true = y_test[i]
 print("=" *40)
-print("S Adithya Chowdary\n212221230100")
 print("=" *40)
 print("{:15}{:5}\t {}\n".format("Word", "True", "Pred"))
 print("-" *40)
